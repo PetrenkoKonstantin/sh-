@@ -2,16 +2,6 @@
 #include <stdlib.h>
 #include <cs50.h>
 
-/*
-int GetInt(){
-    int val;
-    
-    scanf("%d", &val);
-
-    return val;
-}
-*/
-
 int main()
 {
     int minutes;
@@ -24,8 +14,6 @@ int main()
          
      } 
      while (minutes < 0);
-
-    
 
     printf("bottles: %d",minutes * 12);
 
