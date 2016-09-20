@@ -30,7 +30,7 @@ int main()
   n = n*100;											//переводим доллары в центы
   n = roundf(n);                                        // округляем число введеное пользователем до целого
   int size = (int)n;                                    //приводим тип числа введенного пользователем в int
-  const int penny = 1;                                  //обявление переменных
+  const int penny = 1;                                  //объявляем переменные 1,5,10 и 25 центов
   const int nickel = 5;
   const int dime = 10;
   const int quarter = 25;
