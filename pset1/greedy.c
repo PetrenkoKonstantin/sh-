@@ -27,12 +27,13 @@ int main()
          printf("O hai! How much change is owed?: ");   //просим пользователя ввести число
          n = GetFloat();
         } while ( (n == 0) || (n < 0));                 //проверяем число на правильность ввода
-  n = (n * 1000000) / 10000;                          //переводим доллары в центы
+  n = n*100;											//переводим доллары в центы
+  n = roundf(n);                                        // округляем число введеное пользователем до целого
   int size = (int)n;                                    //приводим тип числа введенного пользователем в int
-  int penny = 1;                                        //обявление переменных
-  int nickel = 5;
-  int dime = 10;
-  int quarter = 25;
+  const int penny = 1;                                  //обявление переменных
+  const int nickel = 5;
+  const int dime = 10;
+  const int quarter = 25;
   int difference;
   int count = 0;
   
@@ -101,3 +102,5 @@ int main()
 	printf("%i\n", count + count1 + count2 + count3);
 	return 0;
 }
+
+  
