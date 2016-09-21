@@ -24,20 +24,20 @@ int main()
 {
   float n;
      do {
-         printf("O hai! How much change is owed?: ");   //просим пользователя ввести число
+         printf("O hai! How much change is owed?: ");   // ask the user to enter the number
          n = GetFloat();
-        } while ( (n == 0) || (n < 0));                 //проверяем число на правильность ввода
-  n = n*100;											//переводим доллары в центы
-  n = roundf(n);                                        // округляем число введеное пользователем до целого
-  int size = (int)n;                                    //приводим тип числа введенного пользователем в int
-  const int penny = 1;                                  //объявляем переменные 1,5,10 и 25 центов
+        } while ( (n == 0) || (n < 0));                 // check the number on your entry
+  n = n*100;											// converting dollars to cents
+  n = roundf(n);                                        // to round a number entered by the user to the nearest whole number
+  int size = (int)n;                                    // type to convert the number entered by the user from float to int
+  const int penny = 1;                                  // declare variables 1,5,10 and 25 cents
   const int nickel = 5;
   const int dime = 10;
   const int quarter = 25;
   int difference;
   int count = 0;
   
-	if (quarter <= size)      //первый проход
+	if (quarter <= size)	// the first pass
 	{
 		count = NumberOfCoins(25, size);
 		difference = size - (25 * count);
@@ -63,7 +63,7 @@ int main()
 	int count1 = 0;
 	int difference1 = 0;
 
-	if (dime <= difference) //второй проход
+	if (dime <= difference)		// second pass
 	{
 		count1 = NumberOfCoins(10, difference);
 		difference1 = Count(difference, count1);
@@ -83,7 +83,7 @@ int main()
 	int count2 = 0;
 	int difference2 = 0;
 
-	if (nickel <= difference1) //третий проход
+	if (nickel <= difference1) 	// third pass
 	{
 		count2 = NumberOfCoins(5, difference1);
 		difference2 = difference1 - (5 * count2);
